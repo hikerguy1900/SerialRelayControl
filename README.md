@@ -7,6 +7,12 @@ The Adafruit Feather RP2040 exposes two serial (COM) ports over the USB interfac
 
 Once you have the command prompt (`>`) type `help` to see the latest list of commands. For help on a partiuclar command type `help` followed by the command name. For example, `help relays`.
 
+# Relay Connections
+The two relays on the SRC are electrically independent from each other and from the USB control circuitry. A common way to use the relays is to connect your power source to the common terminal and then youare load to the normally open terminal. To send power to the load turn set the relays state to `on`.
+
+![screenshot][BasicSchematic]
+
+
 # Materials
 Below are the materials I used. I'm sure others will work with minor modifications to the CircuitPython code.
 **Electornics**
@@ -42,4 +48,5 @@ The, version, command will return the currently runing version of the firmare in
 
 
 [SRCBoard]: ./Doc/SerialRelayControl.png
+[BasicSchematic]: ./Doc/BasicSchematic.png
 
