@@ -1,8 +1,7 @@
 # SerialRelayControl
 SerialRelayControl is a hardware and software project that controls two relays via a serial port. The control scheme is a simple shell-like command structure that can be used manually with a program like [Serial (macOS)](https://www.decisivetactics.com/products/serial/) or [PuTTY (Windows)](https://www.chiark.greenend.org.uk/~sgtatham/putty/) or programaticaly in Python, C#, etc.
 
- ![Serial relay control board.](Doc/SerialRealContro.png)
-
+![screenshot][SRCBoard]
 # PC Communication Quick Start
 The Adafruit Feather RP2040 exposes two serial (COM) ports over the USB interface with the PC. One of these serial ports is for controlling the relays using the serial commands. The other is the CircuitPython Read Evalulate Print Loop (REPL), which is used for debug. I don't know of a way to predict which serial port will be named what. To determine which PC COM port is for relay control connect your PC serial softare to either COM port and then press return a few times. If you see the command prompt (`>`) you are in the relay control port. If you don't see this prompt try the other COM port. On macOS or Linux the serial port will be something like, `/dev/tty.usbmodem<number>`.
 
@@ -40,4 +39,7 @@ The, version, command will return the currently runing version of the firmare in
     > version
     RelayControl v0.0.0
       https://github.com/hikerguy1900/SerialRelayControl
+
+
+[SRCBoard]: ./Doc/SerialRelayControl.png
 
