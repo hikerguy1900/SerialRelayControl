@@ -12,6 +12,18 @@ The two relays on the SRC are electrically independent from each other and from 
 
 ![screenshot][BasicSchematic]
 
+# RP2040 Setup
+
+## Install CircuitPython
+* Get the latest version of CircuitPython (uf2 file) for the Adafruit Feathre RP2040 board. https://circuitpython.org/board/adafruit_feather_rp2040/
+* Press and hold the BOOTSEL button on the end of the RP240, then press the REST button just behind the USB-C connector on the RP2040. Hold both buttons for several seconds. When the LED stops changing color (10 seconds), or a drive named RPI-RP2 shows up, release both buttons. In my experinece on macOS the drive does not show up until after the buttons are released.
+* Drag the UF2 file from the previous step into the RPI-RP2 drive. After several seconds the drive should disapear and then a new drive named CIRCUITPY will appear.
+* CircuitPython is now installed on the RP2040.
+
+## Install SerialRelayControl
+* Drag all of the files from the SerialRelayControl/Controller/Adafruit Feather RP2040/ directory on the the CIRCUITPY.
+* Press the RESET button on the RP2040.
+* SerialRelayControl should not be running on the RP2040.
 
 # Materials
 Below are the materials I used. I'm sure others will work with minor modifications to the CircuitPython code.
